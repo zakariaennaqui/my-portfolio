@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X, Github, Linkedin, Mail, ExternalLink, ChevronDown, Code, Palette, Globe } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Menu, X, Github, Linkedin, Mail, ExternalLink, ChevronDown, Code, Globe } from 'lucide-react';
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -640,7 +640,7 @@ N’hésitez pas à me contacter !
         <div style={styles.container}>
           <h2 style={styles.sectionTitle}>Skills & Technologies</h2>
           <div style={styles.skillsGrid}>
-            {skills.map((skill, index) => (
+            {skills.map((skill) => (
               <div key={skill.name} style={styles.skillCard}>
                 <div style={styles.skillHeader}>
                   <span style={styles.skillName}>{skill.name}</span>
