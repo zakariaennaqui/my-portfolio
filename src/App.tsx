@@ -479,7 +479,9 @@ const Portfolio = () => {
       .contact-link-secondary:hover { background-color: #4B5563; }
     `;
     document.head.appendChild(style);
-    return () => document.head.removeChild(style);
+    return () => {
+      document.head.removeChild(style);
+    };
   }, []);
 
   return (
@@ -596,14 +598,16 @@ const Portfolio = () => {
                 onError={(e) => {
                   // Fallback if image doesn't load
                   e.currentTarget.style.display = 'none';
-                  e.currentTarget.parentElement.innerHTML = `
-                    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
-                      <svg width="80" height="80" fill="#60A5FA" viewBox="0 0 24 24">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
-                      </svg>
-                      <p style="color: #9CA3AF; margin-top: 16px;">Your Photo Here</p>
-                    </div>
-                  `;
+                  if (e.currentTarget.parentElement) {
+                    e.currentTarget.parentElement.innerHTML = `
+                      <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
+                        <svg width="80" height="80" fill="#60A5FA" viewBox="0 0 24 24">
+                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                        </svg>
+                        <p style="color: #9CA3AF; margin-top: 16px;">Your Photo Here</p>
+                      </div>
+                    `;
+                  }
                 }}
               />
             </div>
@@ -677,13 +681,15 @@ N’hésitez pas à me contacter !
                       onError={(e) => {
                         // Fallback if image doesn't load
                         e.currentTarget.style.display = 'none';
-                        e.currentTarget.parentElement.innerHTML = `
-                          <div style="display: flex; align-items: center; justify-content: center; height: 100%;">
-                            <svg width="48" height="48" fill="#60A5FA" viewBox="0 0 24 24">
-                              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                            </svg>
-                          </div>
-                        `;
+                        if (e.currentTarget.parentElement) {
+                          e.currentTarget.parentElement.innerHTML = `
+                            <div style="display: flex; align-items: center; justify-content: center; height: 100%;">
+                              <svg width="48" height="48" fill="#60A5FA" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                              </svg>
+                            </div>
+                          `;
+                        }
                       }}
                     />
                   ) : (
