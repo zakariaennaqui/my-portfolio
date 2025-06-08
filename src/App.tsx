@@ -42,7 +42,7 @@ const Portfolio = () => {
     {
       title: 'Projet Site E-commerce - UML & Génie Logiciel',
       description: 'Full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, payment integration, and admin dashboard.',
-      image: 'public/images/projects/ecommerce-seamless-scaled.jpg', // Add your image here
+      image: '/images/projects/ecommerce-seamless-scaled.jpg', // Add your image here
       tech: ['HTML', 'CSS', 'JS', 'Node.js', 'UML'],
       github: 'https://github.com/zakariaennaqui/site-ecommerce-uml',
       live: 'https://project.com'
@@ -50,7 +50,7 @@ const Portfolio = () => {
     {
       title: 'Plateforme de Gestion de Parking – React',
       description: 'Plateforme web de gestion de parkings avec réservation, visualisation en temps réel et interface d’administration.',
-      image: 'public/images/projects/1746236260346.jpg', // Add your image here
+      image: '/images/projects/1746236260346.jpg', // Add your image here
       tech: ['React.js', 'Node.js'],
       github: 'https://github.com/zakariaennaqui/parking-platform',
       live: 'https://parking-platform-two.vercel.app/'
@@ -58,7 +58,7 @@ const Portfolio = () => {
     {
       title: 'Jeu de Paires - Mini Projet Java',
       description: 'Projet académique réalisé dans le cadre du module Java (GI S6 - 2024/2025).Ce jeu de mémoire consiste à retrouver toutes les paires images en un temps limité avec 3 essais',
-      image: 'public/images/projects/make-desktop-apps-in-java.jpg', // Add your image here
+      image: '/images/projects/make-desktop-apps-in-java.jpg', // Add your image here
       tech: ['Java Swing (interface)', 'JDBC + MySQL (base de données, connexion MySQL)', 'Modèle MVC (architecture)'],
       github: 'https://github.com/zakariaennaqui/JeuDePaires',
       live: 'https://jeudepaires.my.canva.site/v3'
@@ -66,7 +66,7 @@ const Portfolio = () => {
     {
       title: 'other projects ...',
       description: 'Explore more of my projects on GitHub, showcasing my skills in web development, software engineering, and more.',
-      image: 'public/images/projects/portfolio.png', // Add your image here
+      image: '/images/projects/portfolio.png', // Add your image here
       tech: [''],
       github: 'https://github.com/zakariaennaqui',
       live: 'https://mon-portfolio-brown.vercel.app/'
@@ -587,7 +587,7 @@ const Portfolio = () => {
           <div style={styles.aboutGrid}>
             <div style={styles.aboutImage}>
               <img 
-                src="public/images/Screenshot_20250604_224438_Gallery.jpg" 
+                src="/images/Screenshot_20250604_224438_Gallery.jpg" 
                 alt="Your Name"
                 style={{
                   width: '100%',
