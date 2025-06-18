@@ -531,7 +531,41 @@ const Portfolio = () => {
         </div>
       </nav>
 
-      {/* Hero Section */}
+
+/////////////////////////////////////////////
+{/* Hero Section */}
+<section id="home" style={styles.hero}>
+  <div style={styles.heroContent}>
+    <div style={styles.heroAvatar}>
+      <div style={styles.heroAvatarInner}>
+        {/* Replace this with your photo */}
+        <img 
+                          src="/images/Screenshot_20250604_224438_Gallery.jpg"   // Update this path to your photo
+          alt="Zakaria Ennaqui"
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            borderRadius: '50%'
+          }}
+          onError={(e) => {
+            // Fallback if image doesn't load
+            e.currentTarget.style.display = 'none';
+            if (e.currentTarget.parentElement) {
+              e.currentTarget.parentElement.innerHTML = `
+                <div style="display: flex; align-items: center; justify-content: center; height: 100%;">
+                  <Code size={48} color="#60A5FA" />
+                </div>
+              `;
+            }
+          }}
+        />
+      </div>
+    </div>
+    <h1 style={styles.heroTitle}>Zakaria Ennaqui</h1>
+    <p style={styles.heroSubtitle}>Étudiant en Génie Informatique à l'ENSA de Berrechid</p>
+
+      /*{/* Hero Section */}
       <section id="home" style={styles.hero}>
         <div style={styles.heroContent}>
           <div style={styles.heroAvatar}>
@@ -540,7 +574,7 @@ const Portfolio = () => {
             </div>
           </div>
           <h1 style={styles.heroTitle}>Zakaria Ennaqui</h1>
-          <p style={styles.heroSubtitle}>Étudiant en Génie Informatique à l'ENSA de Berrechid</p>
+          <p style={styles.heroSubtitle}>Étudiant en Génie Informatique à l'ENSA de Berrechid</p>*/
           <p style={styles.heroDescription}>
             Crafting digital experiences with modern technologies and creative solutions
           </p>
