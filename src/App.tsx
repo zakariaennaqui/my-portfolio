@@ -538,7 +538,7 @@ const Portfolio = () => {
       <div style={styles.heroAvatarInner}>
         {/* Replace this with your photo */}
         <img 
-                          src="/images/Screenshot_20250604_224438_Gallery.jpg"   // Update this path to your photo
+          src="/images/Screenshot_20250604_224438_Gallery.jpg"  // Update this path to your photo
           alt="Zakaria Ennaqui"
           style={{
             width: '100%',
