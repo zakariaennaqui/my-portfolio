@@ -560,7 +560,7 @@ const Portfolio = () => {
         />
       </div>
     </div>
-    <h1 style={styles.heroTitle}>Zakaria Ennaqui</h1>
+    <h1 style={styles.heroTitle}>akaria Ennaqui</h1>
     <p style={styles.heroSubtitle}>Étudiant en Génie Informatique à l'ENSA de Berrechid</p>
 
     
