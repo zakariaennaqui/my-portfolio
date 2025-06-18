@@ -531,8 +531,6 @@ const Portfolio = () => {
         </div>
       </nav>
 
-
-/////////////////////////////////////////////
 {/* Hero Section */}
 <section id="home" style={styles.hero}>
   <div style={styles.heroContent}>
