@@ -565,8 +565,8 @@ const Portfolio = () => {
     <h1 style={styles.heroTitle}>Zakaria Ennaqui</h1>
     <p style={styles.heroSubtitle}>Étudiant en Génie Informatique à l'ENSA de Berrechid</p>
 
-      /*{/* Hero Section */}
-      <section id="home" style={styles.hero}>
+    {/* Hero Section */}
+    {/*<section id="home" style={styles.hero}>
         <div style={styles.heroContent}>
           <div style={styles.heroAvatar}>
             <div style={styles.heroAvatarInner}>
@@ -574,7 +574,7 @@ const Portfolio = () => {
             </div>
           </div>
           <h1 style={styles.heroTitle}>Zakaria Ennaqui</h1>
-          <p style={styles.heroSubtitle}>Étudiant en Génie Informatique à l'ENSA de Berrechid</p>*/
+          <p style={styles.heroSubtitle}>Étudiant en Génie Informatique à l'ENSA de Berrechid</p>*/}
           <p style={styles.heroDescription}>
             Crafting digital experiences with modern technologies and creative solutions
           </p>
