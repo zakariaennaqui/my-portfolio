@@ -33,8 +33,6 @@ const Portfolio = () => {
     { name: 'React', level: 100, color: '#3B82F6' },
     { name: 'TypeScript', level: 100, color: '#2563EB' },
     { name: 'Node.js', level: 100, color: '#10B981' }
-    {/*{ name: 'Python', level: 100, color: '#EAB308' }
-    { name: 'MongoDB', level: 100, color: '#059669' }*/}
   ];
 
   const projects = [
