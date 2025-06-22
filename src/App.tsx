@@ -30,11 +30,11 @@ const Portfolio = () => {
   };
 
   const skills = [
-    { name: 'React', level: 90, color: '#3B82F6' },
-    { name: 'TypeScript', level: 85, color: '#2563EB' },
-    { name: 'Node.js', level: 80, color: '#10B981' },
-    { name: 'Python', level: 75, color: '#EAB308' },
-    { name: 'MongoDB', level: 70, color: '#059669' }
+    { name: 'React', level: 100, color: '#3B82F6' },
+    { name: 'TypeScript', level: 100, color: '#2563EB' },
+    { name: 'Node.js', level: 100, color: '#10B981' }
+    {/*{ name: 'Python', level: 100, color: '#EAB308' }
+    { name: 'MongoDB', level: 100, color: '#059669' }*/}
   ];
 
   const projects = [
