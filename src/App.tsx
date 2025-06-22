@@ -643,7 +643,7 @@ N’hésitez pas à me contacter !
               <div key={skill.name} style={styles.skillCard}>
                 <div style={styles.skillHeader}>
                   <span style={styles.skillName}>{skill.name}</span>
-                  <span style={styles.skillPercent}>{skill.level}%</span>
+                  {/*<span style={styles.skillPercent}>{skill.level}%</span>*/}
                 </div>
                 <div style={styles.skillBarBg}>
                   <div
