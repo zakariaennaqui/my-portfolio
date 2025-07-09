@@ -42,7 +42,7 @@ const Portfolio = () => {
       image: '/images/projects/ecommerce-seamless-scaled.jpg', // Add your image here
       tech: ['HTML', 'CSS', 'JS', 'Node.js', 'UML'],
       github: 'https://github.com/zakariaennaqui/site-ecommerce-uml',
-      live: 'https://project.com'
+      live: 'https://ecommerce-app-6dsg.vercel.app'
     },
     {
       title: 'Plateforme de Gestion de Parking – React',
