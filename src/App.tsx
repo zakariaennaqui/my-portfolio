@@ -1,14 +1,24 @@
-import { useState, useEffect } from 'react';
-import { Menu, X, Github, Linkedin, Mail, ExternalLink, ChevronDown, Code, Globe } from 'lucide-react';
+import { useState, useEffect } from "react";
+import {
+  Menu,
+  X,
+  Github,
+  Linkedin,
+  Mail,
+  ExternalLink,
+  ChevronDown,
+  Code,
+  Globe,
+} from "lucide-react";
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
+  const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'skills', 'projects', 'contact'];
-      const current = sections.find(section => {
+      const sections = ["home", "about", "skills", "projects", "contact"];
+      const current = sections.find((section) => {
         const element = document.getElementById(section);
         if (element) {
           const rect = element.getBoundingClientRect();
@@ -19,432 +29,443 @@ const Portfolio = () => {
       if (current) setActiveSection(current);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: 'smooth' });
+    element?.scrollIntoView({ behavior: "smooth" });
     setIsMenuOpen(false);
   };
 
   const skills = [
-    { name: 'React', level: 100, color: '#3B82F6' },
-    { name: 'TypeScript', level: 100, color: '#2563EB' },
-    { name: 'Node.js', level: 100, color: '#10B981' }
+    { name: "React", level: 100, color: "#3B82F6" },
+    { name: "TypeScript", level: 100, color: "#2563EB" },
+    { name: "Node.js", level: 100, color: "#10B981" },
   ];
 
   const projects = [
     {
-      title: 'Projet Site E-commerce - UML & Génie Logiciel',
-      description: 'Full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, payment integration, and admin dashboard.',
-      image: '/images/projects/ecommerce-seamless-scaled.jpg', // Add your image here
-      tech: ['HTML', 'CSS', 'JS', 'Node.js', 'UML'],
-      github: 'https://github.com/zakariaennaqui/site-ecommerce-uml',
-      live: 'https://ecommerce-app-6dsg.vercel.app'
+      title: "Projet Site E-commerce - UML & Génie Logiciel",
+      description:
+        "Full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, payment integration, and admin dashboard.",
+      image: "/images/projects/ecommerce-seamless-scaled.jpg", // Add your image here
+      tech: ["HTML", "CSS", "JS", "Node.js", "UML"],
+      github: "https://github.com/zakariaennaqui/site-ecommerce-uml",
+      live: "https://ecommerce-app-6dsg.vercel.app",
     },
     {
-      title: 'Plateforme de Gestion de Parking – React',
-      description: 'Plateforme web de gestion de parkings avec réservation, visualisation en temps réel et interface d’administration.',
-      image: '/images/projects/1746236260346.jpg', // Add your image here
-      tech: ['React.js', 'Node.js'],
-      github: 'https://github.com/zakariaennaqui/parking-platform',
-      live: 'https://parking-platform-two.vercel.app/'
+      title: "Plateforme de Gestion de Parking – React",
+      description:
+        "Plateforme web de gestion de parkings avec réservation, visualisation en temps réel et interface d’administration.",
+      image: "/images/projects/1746236260346.jpg", // Add your image here
+      tech: ["React.js", "Node.js"],
+      github: "https://github.com/zakariaennaqui/parking-platform",
+      live: "https://parking-platform-two.vercel.app/",
     },
     {
-      title: 'Jeu de Paires - Mini Projet Java',
-      description: 'Projet académique réalisé dans le cadre du module Java (GI S6 - 2024/2025).Ce jeu de mémoire consiste à retrouver toutes les paires images en un temps limité avec 3 essais',
-      image: '/images/projects/make-desktop-apps-in-java.jpg', // Add your image here
-      tech: ['Java Swing (interface)', 'JDBC + MySQL (base de données, connexion MySQL)', 'Modèle MVC (architecture)'],
-      github: 'https://github.com/zakariaennaqui/JeuDePaires',
-      live: 'https://jeudepaires.my.canva.site/v3'
+      title: "Jeu de Paires - Mini Projet Java",
+      description:
+        "Projet académique réalisé dans le cadre du module Java (GI S6 - 2024/2025).Ce jeu de mémoire consiste à retrouver toutes les paires images en un temps limité avec 3 essais",
+      image: "/images/projects/make-desktop-apps-in-java.jpg", // Add your image here
+      tech: [
+        "Java Swing (interface)",
+        "JDBC + MySQL (base de données, connexion MySQL)",
+        "Modèle MVC (architecture)",
+      ],
+      github: "https://github.com/zakariaennaqui/JeuDePaires",
+      live: "https://jeudepaires.my.canva.site/v3",
     },
     {
-      title: 'other projects ...',
-      description: 'Explore more of my projects on GitHub, showcasing my skills in web development, software engineering, and more.',
-      image: '/images/projects/portfolio.png', // Add your image here
-      tech: [''],
-      github: 'https://github.com/zakariaennaqui',
-      live: 'https://mon-portfolio-brown.vercel.app/'
-    }
+      title: "other projects ...",
+      description:
+        "Explore more of my projects on GitHub, showcasing my skills in web development, software engineering, and more.",
+      image: "/images/projects/portfolio.png", // Add your image here
+      tech: [""],
+      github: "https://github.com/zakariaennaqui",
+      live: "https://mon-portfolio-brown.vercel.app/",
+    },
   ];
 
   const styles = {
     // Navigation
     nav: {
-      position: 'fixed' as const,
+      position: "fixed" as const,
       top: 0,
-      width: '100%',
-      backgroundColor: 'rgba(17, 24, 39, 0.95)',
-      backdropFilter: 'blur(8px)',
+      width: "100%",
+      backgroundColor: "rgba(17, 24, 39, 0.95)",
+      backdropFilter: "blur(8px)",
       zIndex: 50,
-      borderBottom: '1px solid #374151'
+      borderBottom: "1px solid #374151",
     },
     navContainer: {
-      maxWidth: '1200px',
-      margin: '0 auto',
-      padding: '0 20px',
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      height: '70px'
+      maxWidth: "1200px",
+      margin: "0 auto",
+      padding: "0 20px",
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      height: "70px",
     },
     logo: {
-      fontSize: '24px',
-      fontWeight: 'bold',
-      background: 'linear-gradient(135deg, #60A5FA, #A855F7)',
-      WebkitBackgroundClip: 'text',
-      WebkitTextFillColor: 'transparent',
-      backgroundClip: 'text'
+      fontSize: "24px",
+      fontWeight: "bold",
+      background: "linear-gradient(135deg, #60A5FA, #A855F7)",
+      WebkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent",
+      backgroundClip: "text",
     },
     navLinks: {
-      display: 'flex',
-      gap: '30px',
-      listStyle: 'none'
+      display: "flex",
+      gap: "30px",
+      listStyle: "none",
     },
     navLink: {
-      color: '#D1D5DB',
-      textDecoration: 'none',
-      textTransform: 'capitalize' as const,
-      transition: 'color 0.3s ease',
-      cursor: 'pointer',
-      border: 'none',
-      background: 'none',
-      fontSize: '16px'
+      color: "#D1D5DB",
+      textDecoration: "none",
+      textTransform: "capitalize" as const,
+      transition: "color 0.3s ease",
+      cursor: "pointer",
+      border: "none",
+      background: "none",
+      fontSize: "16px",
     },
     navLinkActive: {
-      color: '#60A5FA'
+      color: "#60A5FA",
     },
     mobileMenuBtn: {
-      display: 'none',
-      background: 'none',
-      border: 'none',
-      color: 'white',
-      cursor: 'pointer'
+      display: "none",
+      background: "none",
+      border: "none",
+      color: "white",
+      cursor: "pointer",
     },
     mobileMenu: {
-      display: 'none',
-      flexDirection: 'column' as const,
-      padding: '20px',
-      borderTop: '1px solid #374151'
+      display: "none",
+      flexDirection: "column" as const,
+      padding: "20px",
+      borderTop: "1px solid #374151",
     },
     mobileMenuLink: {
-      color: '#D1D5DB',
-      textDecoration: 'none',
-      padding: '10px 0',
-      textTransform: 'capitalize' as const,
-      cursor: 'pointer',
-      border: 'none',
-      background: 'none',
-      fontSize: '16px',
-      textAlign: 'left' as const
+      color: "#D1D5DB",
+      textDecoration: "none",
+      padding: "10px 0",
+      textTransform: "capitalize" as const,
+      cursor: "pointer",
+      border: "none",
+      background: "none",
+      fontSize: "16px",
+      textAlign: "left" as const,
     },
 
     // Hero Section
     hero: {
-      minHeight: '100vh',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      position: 'relative' as const,
-      overflow: 'hidden',
-      background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(168, 85, 247, 0.1))'
+      minHeight: "100vh",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      position: "relative" as const,
+      overflow: "hidden",
+      background:
+        "linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(168, 85, 247, 0.1))",
     },
     heroContent: {
-      textAlign: 'center' as const,
+      textAlign: "center" as const,
       zIndex: 10,
-      padding: '0 20px'
+      padding: "0 20px",
     },
     heroAvatar: {
-      width: '128px',
-      height: '128px',
-      margin: '0 auto 24px',
-      borderRadius: '50%',
-      background: 'linear-gradient(135deg, #3B82F6, #8B5CF6)',
-      padding: '4px',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center'
+      width: "128px",
+      height: "128px",
+      margin: "0 auto 24px",
+      borderRadius: "50%",
+      background: "linear-gradient(135deg, #3B82F6, #8B5CF6)",
+      padding: "4px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
     },
     heroAvatarInner: {
-      width: '100%',
-      height: '100%',
-      borderRadius: '50%',
-      backgroundColor: '#111827',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center'
+      width: "100%",
+      height: "100%",
+      borderRadius: "50%",
+      backgroundColor: "#111827",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
     },
     heroTitle: {
-      fontSize: 'clamp(3rem, 8vw, 5rem)',
-      fontWeight: 'bold',
-      marginBottom: '24px',
-      background: 'linear-gradient(135deg, #60A5FA, #A855F7, #3B82F6)',
-      WebkitBackgroundClip: 'text',
-      WebkitTextFillColor: 'transparent',
-      backgroundClip: 'text'
+      fontSize: "clamp(3rem, 8vw, 5rem)",
+      fontWeight: "bold",
+      marginBottom: "24px",
+      background: "linear-gradient(135deg, #60A5FA, #A855F7, #3B82F6)",
+      WebkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent",
+      backgroundClip: "text",
     },
     heroSubtitle: {
-      fontSize: 'clamp(1.2rem, 4vw, 1.5rem)',
-      color: '#D1D5DB',
-      marginBottom: '32px'
+      fontSize: "clamp(1.2rem, 4vw, 1.5rem)",
+      color: "#D1D5DB",
+      marginBottom: "32px",
     },
     heroDescription: {
-      fontSize: '18px',
-      color: '#9CA3AF',
-      marginBottom: '48px',
-      maxWidth: '600px',
-      margin: '0 auto 48px'
+      fontSize: "18px",
+      color: "#9CA3AF",
+      marginBottom: "48px",
+      maxWidth: "600px",
+      margin: "0 auto 48px",
     },
     heroButtons: {
-      display: 'flex',
-      gap: '16px',
-      justifyContent: 'center',
-      flexWrap: 'wrap' as const
+      display: "flex",
+      gap: "16px",
+      justifyContent: "center",
+      flexWrap: "wrap" as const,
     },
     btnPrimary: {
-      padding: '12px 32px',
-      background: 'linear-gradient(135deg, #3B82F6, #8B5CF6)',
-      border: 'none',
-      borderRadius: '8px',
-      color: 'white',
-      fontSize: '16px',
-      cursor: 'pointer',
-      transition: 'transform 0.3s ease',
-      textDecoration: 'none',
-      display: 'inline-block'
+      padding: "12px 32px",
+      background: "linear-gradient(135deg, #3B82F6, #8B5CF6)",
+      border: "none",
+      borderRadius: "8px",
+      color: "white",
+      fontSize: "16px",
+      cursor: "pointer",
+      transition: "transform 0.3s ease",
+      textDecoration: "none",
+      display: "inline-block",
     },
     btnSecondary: {
-      padding: '12px 32px',
-      border: '2px solid #3B82F6',
-      borderRadius: '8px',
-      color: 'white',
-      fontSize: '16px',
-      cursor: 'pointer',
-      transition: 'background-color 0.3s ease',
-      textDecoration: 'none',
-      display: 'inline-block',
-      backgroundColor: 'transparent'
+      padding: "12px 32px",
+      border: "2px solid #3B82F6",
+      borderRadius: "8px",
+      color: "white",
+      fontSize: "16px",
+      cursor: "pointer",
+      transition: "background-color 0.3s ease",
+      textDecoration: "none",
+      display: "inline-block",
+      backgroundColor: "transparent",
     },
     chevronDown: {
-      position: 'absolute' as const,
-      bottom: '32px',
-      left: '50%',
-      transform: 'translateX(-50%)',
-      animation: 'bounce 2s infinite',
-      color: '#9CA3AF'
+      position: "absolute" as const,
+      bottom: "32px",
+      left: "50%",
+      transform: "translateX(-50%)",
+      animation: "bounce 2s infinite",
+      color: "#9CA3AF",
     },
 
     // Section
     section: {
-      padding: '80px 20px'
+      padding: "80px 20px",
     },
     sectionAlt: {
-      padding: '80px 20px',
-      backgroundColor: 'rgba(31, 41, 55, 0.5)'
+      padding: "80px 20px",
+      backgroundColor: "rgba(31, 41, 55, 0.5)",
     },
     container: {
-      maxWidth: '1200px',
-      margin: '0 auto'
+      maxWidth: "1200px",
+      margin: "0 auto",
     },
     sectionTitle: {
-      fontSize: '2.5rem',
-      fontWeight: 'bold',
-      textAlign: 'center' as const,
-      marginBottom: '64px',
-      background: 'linear-gradient(135deg, #60A5FA, #A855F7)',
-      WebkitBackgroundClip: 'text',
-      WebkitTextFillColor: 'transparent',
-      backgroundClip: 'text'
+      fontSize: "2.5rem",
+      fontWeight: "bold",
+      textAlign: "center" as const,
+      marginBottom: "64px",
+      background: "linear-gradient(135deg, #60A5FA, #A855F7)",
+      WebkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent",
+      backgroundClip: "text",
     },
 
     // About Section
     aboutGrid: {
-      display: 'grid',
-      gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-      gap: '48px',
-      alignItems: 'center'
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+      gap: "48px",
+      alignItems: "center",
     },
     aboutImage: {
-      width: '100%',
-      height: '400px',
-      background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(168, 85, 247, 0.2))',
-      borderRadius: '16px',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      flexDirection: 'column' as const
+      width: "100%",
+      height: "400px",
+      background:
+        "linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(168, 85, 247, 0.2))",
+      borderRadius: "16px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      flexDirection: "column" as const,
     },
     aboutText: {
-      fontSize: '18px',
-      color: '#D1D5DB',
-      lineHeight: '1.8',
-      marginBottom: '24px'
+      fontSize: "18px",
+      color: "#D1D5DB",
+      lineHeight: "1.8",
+      marginBottom: "24px",
     },
     statsGrid: {
-      display: 'grid',
-      gridTemplateColumns: 'repeat(2, 1fr)',
-      gap: '24px',
-      marginTop: '32px'
+      display: "grid",
+      gridTemplateColumns: "repeat(2, 1fr)",
+      gap: "24px",
+      marginTop: "32px",
     },
     statCard: {
-      textAlign: 'center' as const,
-      padding: '24px',
-      backgroundColor: 'rgba(31, 41, 55, 0.5)',
-      borderRadius: '8px'
+      textAlign: "center" as const,
+      padding: "24px",
+      backgroundColor: "rgba(31, 41, 55, 0.5)",
+      borderRadius: "8px",
     },
     statNumber: {
-      fontSize: '2rem',
-      fontWeight: 'bold',
-      color: '#60A5FA',
-      marginBottom: '8px'
+      fontSize: "2rem",
+      fontWeight: "bold",
+      color: "#60A5FA",
+      marginBottom: "8px",
     },
     statLabel: {
-      color: '#9CA3AF'
+      color: "#9CA3AF",
     },
 
     // Skills Section
     skillsGrid: {
-      display: 'grid',
-      gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-      gap: '32px'
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+      gap: "32px",
     },
     skillCard: {
-      backgroundColor: '#1F2937',
-      padding: '24px',
-      borderRadius: '8px'
+      backgroundColor: "#1F2937",
+      padding: "24px",
+      borderRadius: "8px",
     },
     skillHeader: {
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      marginBottom: '16px'
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      marginBottom: "16px",
     },
     skillName: {
-      fontSize: '18px',
-      fontWeight: '600'
+      fontSize: "18px",
+      fontWeight: "600",
     },
     skillPercent: {
-      fontSize: '14px',
-      color: '#9CA3AF'
+      fontSize: "14px",
+      color: "#9CA3AF",
     },
     skillBarBg: {
-      width: '100%',
-      height: '12px',
-      backgroundColor: '#374151',
-      borderRadius: '6px',
-      overflow: 'hidden'
+      width: "100%",
+      height: "12px",
+      backgroundColor: "#374151",
+      borderRadius: "6px",
+      overflow: "hidden",
     },
     skillBar: {
-      height: '100%',
-      borderRadius: '6px',
-      transition: 'width 1s ease-out'
+      height: "100%",
+      borderRadius: "6px",
+      transition: "width 1s ease-out",
     },
 
     // Projects Section
     projectsGrid: {
-      display: 'grid',
-      gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
-      gap: '32px'
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))",
+      gap: "32px",
     },
     projectCard: {
-      backgroundColor: '#1F2937',
-      borderRadius: '8px',
-      overflow: 'hidden',
-      transition: 'transform 0.3s ease'
+      backgroundColor: "#1F2937",
+      borderRadius: "8px",
+      overflow: "hidden",
+      transition: "transform 0.3s ease",
     },
     projectImage: {
-      height: '200px',
-      background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(168, 85, 247, 0.2))',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center'
+      height: "200px",
+      background:
+        "linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(168, 85, 247, 0.2))",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
     },
     projectContent: {
-      padding: '24px'
+      padding: "24px",
     },
     projectTitle: {
-      fontSize: '20px',
-      fontWeight: 'bold',
-      marginBottom: '12px'
+      fontSize: "20px",
+      fontWeight: "bold",
+      marginBottom: "12px",
     },
     projectDescription: {
-      color: '#9CA3AF',
-      fontSize: '14px',
-      lineHeight: '1.6',
-      marginBottom: '16px'
+      color: "#9CA3AF",
+      fontSize: "14px",
+      lineHeight: "1.6",
+      marginBottom: "16px",
     },
     techTags: {
-      display: 'flex',
-      flexWrap: 'wrap' as const,
-      gap: '8px',
-      marginBottom: '16px'
+      display: "flex",
+      flexWrap: "wrap" as const,
+      gap: "8px",
+      marginBottom: "16px",
     },
     techTag: {
-      padding: '4px 12px',
-      backgroundColor: 'rgba(59, 130, 246, 0.2)',
-      color: '#93C5FD',
-      borderRadius: '16px',
-      fontSize: '12px'
+      padding: "4px 12px",
+      backgroundColor: "rgba(59, 130, 246, 0.2)",
+      color: "#93C5FD",
+      borderRadius: "16px",
+      fontSize: "12px",
     },
     projectLinks: {
-      display: 'flex',
-      gap: '16px'
+      display: "flex",
+      gap: "16px",
     },
     projectLink: {
-      display: 'flex',
-      alignItems: 'center',
-      gap: '8px',
-      color: '#9CA3AF',
-      textDecoration: 'none',
-      fontSize: '14px',
-      transition: 'color 0.3s ease'
+      display: "flex",
+      alignItems: "center",
+      gap: "8px",
+      color: "#9CA3AF",
+      textDecoration: "none",
+      fontSize: "14px",
+      transition: "color 0.3s ease",
     },
 
     // Contact Section
     contactContent: {
-      textAlign: 'center' as const
+      textAlign: "center" as const,
     },
     contactDescription: {
-      fontSize: '20px',
-      color: '#D1D5DB',
-      marginBottom: '48px',
-      maxWidth: '600px',
-      margin: '0 auto 48px'
+      fontSize: "20px",
+      color: "#D1D5DB",
+      marginBottom: "48px",
+      maxWidth: "600px",
+      margin: "0 auto 48px",
     },
     contactLinks: {
-      display: 'flex',
-      gap: '24px',
-      justifyContent: 'center',
-      flexWrap: 'wrap' as const,
-      marginBottom: '48px'
+      display: "flex",
+      gap: "24px",
+      justifyContent: "center",
+      flexWrap: "wrap" as const,
+      marginBottom: "48px",
     },
     contactLink: {
-      display: 'flex',
-      alignItems: 'center',
-      gap: '12px',
-      padding: '12px 24px',
-      backgroundColor: '#3B82F6',
-      color: 'white',
-      textDecoration: 'none',
-      borderRadius: '8px',
-      transition: 'background-color 0.3s ease'
+      display: "flex",
+      alignItems: "center",
+      gap: "12px",
+      padding: "12px 24px",
+      backgroundColor: "#3B82F6",
+      color: "white",
+      textDecoration: "none",
+      borderRadius: "8px",
+      transition: "background-color 0.3s ease",
     },
     contactLinkSecondary: {
-      backgroundColor: '#374151'
+      backgroundColor: "#374151",
     },
     footer: {
-      borderTop: '1px solid #374151',
-      paddingTop: '32px',
-      color: '#9CA3AF',
-      textAlign: 'center' as const
-    }
+      borderTop: "1px solid #374151",
+      paddingTop: "32px",
+      color: "#9CA3AF",
+      textAlign: "center" as const,
+    },
   };
 
   // Add CSS animation
   useEffect(() => {
-    const style = document.createElement('style');
+    const style = document.createElement("style");
     style.textContent = `
       @keyframes bounce {
         0%, 20%, 53%, 80%, 100% {
@@ -487,16 +508,16 @@ const Portfolio = () => {
       <nav style={styles.nav}>
         <div style={styles.navContainer}>
           <div style={styles.logo}>Portfolio</div>
-          
+
           {/* Desktop Navigation */}
           <div className="nav-links" style={styles.navLinks}>
-            {['home', 'about', 'skills', 'projects', 'contact'].map((item) => (
+            {["home", "about", "skills", "projects", "contact"].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
                 style={{
                   ...styles.navLink,
-                  ...(activeSection === item ? styles.navLinkActive : {})
+                  ...(activeSection === item ? styles.navLinkActive : {}),
                 }}
               >
                 {item}
@@ -515,8 +536,11 @@ const Portfolio = () => {
         </div>
 
         {/* Mobile Navigation */}
-        <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`} style={styles.mobileMenu}>
-          {['home', 'about', 'skills', 'projects', 'contact'].map((item) => (
+        <div
+          className={`mobile-menu ${isMenuOpen ? "open" : ""}`}
+          style={styles.mobileMenu}
+        >
+          {["home", "about", "skills", "projects", "contact"].map((item) => (
             <button
               key={item}
               onClick={() => scrollToSection(item)}
@@ -529,7 +553,7 @@ const Portfolio = () => {
       </nav>
 
       {/* Hero Section*/}
-    <section id="home" style={styles.hero}>
+      <section id="home" style={styles.hero}>
         <div style={styles.heroContent}>
           <div style={styles.heroAvatar}>
             <div style={styles.heroAvatarInner}>
@@ -537,39 +561,42 @@ const Portfolio = () => {
             </div>
           </div>
           <h1 style={styles.heroTitle}>Zakaria Ennaqui</h1>
-          <p style={styles.heroSubtitle}>Étudiant en Génie Informatique à l'ENSA de Berrechid</p>
+          <p style={styles.heroSubtitle}>
+            Étudiant en Génie Informatique à l'ENSA de Berrechid
+          </p>
           <p style={styles.heroDescription}>
-            Crafting digital experiences with modern technologies and creative solutions
+            Crafting digital experiences with modern technologies and creative
+            solutions
           </p>
           <div style={styles.heroButtons}>
             <button
-              onClick={() => scrollToSection('projects')}
+              onClick={() => scrollToSection("projects")}
               style={styles.btnPrimary}
             >
               View My Work
             </button>
             <button
-              onClick={() => scrollToSection('contact')}
+              onClick={() => scrollToSection("contact")}
               style={styles.btnSecondary}
               className="btn-secondary"
             >
               Get In Touch
             </button>
             <a
-    href="/Cv_ENNAQUI-Zakaria.pdf"
-    target="_blank"
-    rel="noopener noreferrer"
-    style={styles.btnPrimary}
-  >
-    Voir CV
-  </a>
-  <a
-    href="/Cv_ENNAQUI-Zakaria.pdf"
-    download
-    style={styles.btnSecondary}
-  >
-    Télécharger CV
-  </a>
+              href="/Cv_ENNAQUI-Zakaria.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={styles.btnPrimary}
+            >
+              Voir CV
+            </a>
+            <a
+              href="/Cv_ENNAQUI-Zakaria.pdf"
+              download
+              style={styles.btnSecondary}
+            >
+              Télécharger CV
+            </a>
           </div>
         </div>
         <div style={styles.chevronDown}>
@@ -583,18 +610,18 @@ const Portfolio = () => {
           <h2 style={styles.sectionTitle}>About Me</h2>
           <div style={styles.aboutGrid}>
             <div style={styles.aboutImage}>
-              <img 
-                src="/images/Screenshot_20250604_224438_Gallery.jpg" 
+              <img
+                src="/images/Screenshot_20250604_224438_Gallery.jpg"
                 alt="Your Name"
                 style={{
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'cover',
-                  borderRadius: '16px'
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  borderRadius: "16px",
                 }}
                 onError={(e) => {
                   // Fallback if image doesn't load
-                  e.currentTarget.style.display = 'none';
+                  e.currentTarget.style.display = "none";
                   if (e.currentTarget.parentElement) {
                     e.currentTarget.parentElement.innerHTML = `
                       <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
@@ -610,12 +637,20 @@ const Portfolio = () => {
             </div>
             <div>
               <p style={styles.aboutText}>
-                Étudiant en première année du cycle ingénieur en Génie Informatique à l’École Nationale des Sciences Appliquées de Berrechid (ENSAB), je suis passionné par le développement logiciel, l’architecture des systèmes et les réseaux informatiques.
-Grâce à une formation polyvalente alliant programmation (Java, C, Web, Python), bases de données, génie logiciel et systèmes d’exploitation, je développe une solide culture d’ingénieur.
+                Étudiant en première année du cycle ingénieur en Génie
+                Informatique à l’École Nationale des Sciences Appliquées de
+                Berrechid (ENSAB), je suis passionné par le développement
+                logiciel, l’architecture des systèmes et les réseaux
+                informatiques. Grâce à une formation polyvalente alliant
+                programmation (Java, C, Web, Python), bases de données, génie
+                logiciel et systèmes d’exploitation, je développe une solide
+                culture d’ingénieur.
               </p>
               <p style={styles.aboutText}>
-                Je suis actuellement à la recherche d’un stage d’initiation pour découvrir le milieu professionnel, consolider mes compétences techniques et contribuer à des projets concrets.
-N’hésitez pas à me contacter !
+                Je suis actuellement à la recherche d’un stage d’initiation pour
+                découvrir le milieu professionnel, consolider mes compétences
+                techniques et contribuer à des projets concrets. N’hésitez pas à
+                me contacter !
               </p>
               <div style={styles.statsGrid}>
                 <div style={styles.statCard}>
@@ -648,7 +683,7 @@ N’hésitez pas à me contacter !
                     style={{
                       ...styles.skillBar,
                       width: `${skill.level}%`,
-                      backgroundColor: skill.color
+                      backgroundColor: skill.color,
                     }}
                   ></div>
                 </div>
@@ -664,20 +699,24 @@ N’hésitez pas à me contacter !
           <h2 style={styles.sectionTitle}>Featured Projects</h2>
           <div style={styles.projectsGrid}>
             {projects.map((project, index) => (
-              <div key={index} style={styles.projectCard} className="project-card">
+              <div
+                key={index}
+                style={styles.projectCard}
+                className="project-card"
+              >
                 <div style={styles.projectImage}>
                   {project.image ? (
-                    <img 
-                      src={project.image} 
+                    <img
+                      src={project.image}
                       alt={project.title}
                       style={{
-                        width: '100%',
-                        height: '100%',
-                        objectFit: 'cover'
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
                       }}
                       onError={(e) => {
                         // Fallback if image doesn't load
-                        e.currentTarget.style.display = 'none';
+                        e.currentTarget.style.display = "none";
                         if (e.currentTarget.parentElement) {
                           e.currentTarget.parentElement.innerHTML = `
                             <div style="display: flex; align-items: center; justify-content: center; height: 100%;">
@@ -714,7 +753,7 @@ N’hésitez pas à me contacter !
                     </a>
                     <a
                       href={project.live}
-                      style={{ ...styles.projectLink, color: '#60A5FA' }}
+                      style={{ ...styles.projectLink, color: "#60A5FA" }}
                       className="project-link"
                     >
                       <ExternalLink size={16} />
@@ -734,9 +773,10 @@ N’hésitez pas à me contacter !
           <div style={styles.contactContent}>
             <h2 style={styles.sectionTitle}>Let's Work Together</h2>
             <p style={styles.contactDescription}>
-              Have a project in mind? I'd love to hear about it. Let's create something amazing together.
+              Have a project in mind? I'd love to hear about it. Let's create
+              something amazing together.
             </p>
-            
+
             <div style={styles.contactLinks}>
               <a
                 href="mailto:zakariaennaqui.pro@gmail.com"
@@ -748,7 +788,10 @@ N’hésitez pas à me contacter !
               </a>
               <a
                 href="https://www.linkedin.com/in/zakaria-ennaqui-990883362"
-                style={{ ...styles.contactLink, ...styles.contactLinkSecondary }}
+                style={{
+                  ...styles.contactLink,
+                  ...styles.contactLinkSecondary,
+                }}
                 className="contact-link contact-link-secondary"
               >
                 <Linkedin size={20} />
@@ -756,7 +799,10 @@ N’hésitez pas à me contacter !
               </a>
               <a
                 href="https://github.com/zakariaennaqui"
-                style={{ ...styles.contactLink, ...styles.contactLinkSecondary }}
+                style={{
+                  ...styles.contactLink,
+                  ...styles.contactLinkSecondary,
+                }}
                 className="contact-link contact-link-secondary"
               >
                 <Github size={20} />
