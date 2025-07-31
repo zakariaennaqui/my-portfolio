@@ -81,7 +81,6 @@ const Portfolio = () => {
       title: "other projects ...",
       description:
         "Explore more of my projects on GitHub, showcasing my skills in web development, software engineering, and more.",
-      image: "/images/projects/portfolio.png", // Add your image here
       tech: [""],
       github: "https://github.com/zakariaennaqui",
       live: "https://mon-portfolio-brown.vercel.app/",
@@ -611,7 +610,7 @@ const Portfolio = () => {
           <div style={styles.aboutGrid}>
             <div style={styles.aboutImage}>
               <img
-                src="/images/Screenshot_20250604_224438_Gallery.jpg"
+                src="/images/zakaria.jpg"
                 alt="Your Name"
                 style={{
                   width: "100%",
