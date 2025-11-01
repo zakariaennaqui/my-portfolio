@@ -42,25 +42,25 @@ const Portfolio = () => {
   const skills = [
     { name: "React", level: 100, color: "#3B82F6" },
     { name: "TypeScript", level: 100, color: "#2563EB" },
-    { name: "Node.js", level: 100, color: "#10B981" },
+    { name: "Node Js", level: 100, color: "#10B981" },
   ];
 
   const projects = [
     {
-      title: "Projet Site E-commerce - UML & Génie Logiciel",
+      title: "",
       description:
         "Full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, payment integration, and admin dashboard.",
       image: "/images/projects/ecommerce-seamless-scaled.jpg", // Add your image here
-      tech: ["HTML", "CSS", "JS", "Node.js", "UML"],
+      tech: ["React Js", "Node Js"],
       github: "https://github.com/zakariaennaqui/site-ecommerce-uml",
       live: "https://ecommerce-app-6dsg.vercel.app",
     },
     {
-      title: "Plateforme de Gestion de Parking – React",
+      title: "Plateforme de Gestion de Parking",
       description:
         "Plateforme web de gestion de parkings avec réservation, visualisation en temps réel et interface d’administration.",
       image: "/images/projects/1746236260346.jpg", // Add your image here
-      tech: ["React.js", "Node.js"],
+      tech: ["React Js", "Node Js"],
       github: "https://github.com/zakariaennaqui/parking-platform",
       live: "https://parking-platform-two.vercel.app/",
     },
@@ -71,7 +71,7 @@ const Portfolio = () => {
       image: "/images/projects/make-desktop-apps-in-java.jpg", // Add your image here
       tech: [
         "Java Swing (interface)",
-        "JDBC + MySQL (base de données, connexion MySQL)",
+        "JDBC + MySQL",
         "Modèle MVC (architecture)",
       ],
       github: "https://github.com/zakariaennaqui/JeuDePaires",
@@ -636,20 +636,10 @@ const Portfolio = () => {
             </div>
             <div>
               <p style={styles.aboutText}>
-                Étudiant en première année du cycle ingénieur en Génie
-                Informatique à l’École Nationale des Sciences Appliquées de
-                Berrechid (ENSAB), je suis passionné par le développement
-                logiciel, l’architecture des systèmes et les réseaux
-                informatiques. Grâce à une formation polyvalente alliant
-                programmation (Java, C, Web, Python), bases de données, génie
-                logiciel et systèmes d’exploitation, je développe une solide
-                culture d’ingénieur.
+                ...
               </p>
               <p style={styles.aboutText}>
-                Je suis actuellement à la recherche d’un stage d’initiation pour
-                découvrir le milieu professionnel, consolider mes compétences
-                techniques et contribuer à des projets concrets. N’hésitez pas à
-                me contacter !
+                ....
               </p>
               <div style={styles.statsGrid}>
                 <div style={styles.statCard}>
