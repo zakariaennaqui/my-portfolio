@@ -582,7 +582,7 @@ const Portfolio = () => {
               Get In Touch
             </button>
             <a
-              href="/Cv_ENNAQUI-Zakaria.pdf"
+              href="/Cv_ENNAQUI_Zakaria.pdf"
               target="_blank"
               rel="noopener noreferrer"
               style={styles.btnPrimary}
@@ -590,7 +590,7 @@ const Portfolio = () => {
               Voir CV
             </a>
             <a
-              href="/Cv_ENNAQUI-Zakaria.pdf"
+              href="/Cv_ENNAQUI_Zakaria.pdf"
               download
               style={styles.btnSecondary}
             >
