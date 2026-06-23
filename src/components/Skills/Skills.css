@@ -1,0 +1,38 @@
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.skills__card {
+  background: rgba(31, 41, 55, 0.8);
+  border: 1px solid #374151;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.skills__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.skills__name {
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.skills__bar-bg {
+  height: 8px;
+  background: rgba(55, 65, 81, 0.8);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skills__bar {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 1s ease;
+}

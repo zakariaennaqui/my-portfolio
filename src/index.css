@@ -14,3 +14,61 @@ body {
   color: white;
   line-height: 1.6;
 }
+
+/* ── Shared layout ─────────────────────────────────────────── */
+.section {
+  padding: 80px 20px;
+}
+
+.section--alt {
+  padding: 80px 20px;
+  background-color: rgba(31, 41, 55, 0.5);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section__title {
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 48px;
+  background: linear-gradient(135deg, #60a5fa, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Shared buttons ────────────────────────────────────────── */
+.btn {
+  padding: 12px 32px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.btn--primary {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  color: white;
+}
+
+.btn--secondary {
+  border: 2px solid #3b82f6;
+  color: white;
+  background: transparent;
+}
+
+.btn--secondary:hover {
+  background-color: rgba(59, 130, 246, 0.1);
+}
