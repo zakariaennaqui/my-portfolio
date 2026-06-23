@@ -47,7 +47,7 @@ const Portfolio = () => {
 
   const projects = [
     {
-      title: "",
+      title: "E-commerce App",
       description:
         "Full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, payment integration, and admin dashboard.",
       image: "/images/projects/ecommerce-seamless-scaled.jpg", // Add your image here
@@ -56,34 +56,11 @@ const Portfolio = () => {
       live: "https://ecommerce-app-6dsg.vercel.app",
     },
     {
-      title: "Plateforme de Gestion de Parking",
-      description:
-        "Plateforme web de gestion de parkings avec réservation, visualisation en temps réel et interface d’administration.",
-      image: "/images/projects/1746236260346.jpg", // Add your image here
-      tech: ["React Js", "Node Js"],
-      github: "https://github.com/zakariaennaqui/parking-platform",
-      live: "https://parking-platform-two.vercel.app/",
-    },
-    {
-      title: "Jeu de Paires - Mini Projet Java",
-      description:
-        "Projet académique réalisé dans le cadre du module Java (GI S6 - 2024/2025).Ce jeu de mémoire consiste à retrouver toutes les paires images en un temps limité avec 3 essais",
-      image: "/images/projects/make-desktop-apps-in-java.jpg", // Add your image here
-      tech: [
-        "Java Swing (interface)",
-        "JDBC + MySQL",
-        "Modèle MVC (architecture)",
-      ],
-      github: "https://github.com/zakariaennaqui/JeuDePaires",
-      live: "https://jeudepaires.my.canva.site/v3",
-    },
-    {
       title: "other projects ...",
       description:
         "Explore more of my projects on GitHub, showcasing my skills in web development, software engineering, and more.",
       tech: [""],
       github: "https://github.com/zakariaennaqui",
-      live: "https://mon-portfolio-brown.vercel.app/",
     },
   ];
 
