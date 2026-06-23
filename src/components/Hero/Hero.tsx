@@ -16,9 +16,9 @@ export function Hero({ onScrollTo }: HeroProps) {
         </div>
 
         <h1 className="hero__title">Zakaria Ennaqui</h1>
-        <p className="hero__subtitle">Full Stack Developer</p>
+        <p className="hero__subtitle">4th-year Computer Engineering student at ENSA Berrechid</p>
         <p className="hero__description">
-          Building modern web applications with React, TypeScript & Node.js
+          Crafting digital experiences with modern technologies and creative solutions
         </p>
 
         <div className="hero__buttons">
