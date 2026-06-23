@@ -14,7 +14,7 @@ export const projects: Project[] = [
     title: "Other Projects ...",
     description:
       "Explore more of my projects on GitHub, showcasing my skills in web development, software engineering, and more.",
-    tech: [    ],
+    tech: ["     "],
     github: "https://github.com/zakariaennaqui",
   },
 ];
