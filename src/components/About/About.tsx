@@ -8,7 +8,7 @@ export function About() {
         <div className="about__grid">
           <div className="about__image">
             <img
-              src="/images/zakaria.jpg"
+              src="/assets/zakaria.jpg"
               alt="Zakaria Ennaqui"
               onError={(e) => {
                 e.currentTarget.style.display = "none";
@@ -32,17 +32,6 @@ export function About() {
             <p className="about__text">
               {/* Add your second paragraph here */}
             </p>
-
-            <div className="about__stats">
-              <div className="about__stat-card">
-                <div className="about__stat-number">4+</div>
-                <div className="about__stat-label">Projects Completed</div>
-              </div>
-              <div className="about__stat-card">
-                <div className="about__stat-number">0+</div>
-                <div className="about__stat-label">Years Experience</div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
