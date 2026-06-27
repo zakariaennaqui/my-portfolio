@@ -16,11 +16,13 @@ export default function App() {
   return (
     <div>
       <Navbar activeSection={activeSection} />
-      <Hero onScrollTo={scrollToSection} />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
+      <main>
+        <Hero onScrollTo={scrollToSection} />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+      </main>
     </div>
   );
 }
