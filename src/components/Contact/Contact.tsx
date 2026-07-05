@@ -141,7 +141,7 @@ export function Contact() {
               </div>
               <div>
                 <div className="contact__location-title">Location</div>
-                <div className="contact__location-sub">Berrechid, Morocco · ENSA Berrechid</div>
+                <div className="contact__location-sub">Casablanca · Morocco</div>
               </div>
             </div>
           </div>

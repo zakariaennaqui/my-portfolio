@@ -78,7 +78,6 @@ const skillCategories = [
       { name: "scikit-learn",             level: 78 },
       { name: "NLTK / NLP",              level: 73 },
       { name: "Power BI / DAX",          level: 76 },
-      { name: "Google Gemini AI",        level: 70 },
     ],
   },
 ];
