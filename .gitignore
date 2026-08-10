@@ -1,3 +1,6 @@
+*.md
+main.tex
+
 # Logs
 logs
 *.log
