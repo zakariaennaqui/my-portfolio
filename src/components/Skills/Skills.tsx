@@ -143,7 +143,7 @@ export function Skills() {
                   <div key={skill.name} className="skills__bar-wrap">
                     <div className="skills__bar-info">
                       <span className="skills__bar-name">{skill.name}</span>
-                      <span className="skills__bar-pct">{skill.level}%</span>
+                      {/* <span className="skills__bar-pct">{skill.level}%</span> */}
                     </div>
                     <div className="skills__bar-track">
                       <div

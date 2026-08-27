@@ -83,8 +83,8 @@ export function Hero({ onScrollTo }: HeroProps) {
           <div className="hero__stats">
             {[
               { value: "10+", label: "Projects Built" },
-              { value: "89%", label: "ML Accuracy" },
-              { value: "9",   label: "Microservices" },
+              // { value: "89%", label: "ML Accuracy" },
+              // { value: "9",   label: "Microservices" },
               { value: "3",   label: "Languages" },
             ].map((s) => (
               <div key={s.label} className="hero__stat">
