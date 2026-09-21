@@ -57,7 +57,7 @@ export function Hero({ onScrollTo }: HeroProps) {
           {/* Badge */}
           <div className="hero__badge">
             <span className="hero__badge-dot" />
-            4th-year Engineering Student · ENSA Berrechid
+            5th/Final-year Engineering Student at ENSA Seeking PFE
           </div>
 
           {/* Heading */}
@@ -189,7 +189,7 @@ export function Hero({ onScrollTo }: HeroProps) {
               {/* Status */}
               <div className="hero__status">
                 <span className="hero__status-dot" />
-                Available for internship
+                Seeking PFE
               </div>
             </div>
 
@@ -225,8 +225,8 @@ export function Hero({ onScrollTo }: HeroProps) {
                 <span className="hero__card-stat-l">Projects</span>
               </div>
               <div className="hero__card-stat">
-                <span className="hero__card-stat-n">2026</span>
-                <span className="hero__card-stat-l">Seeking PFA</span>
+                <span className="hero__card-stat-n">2027</span>
+                <span className="hero__card-stat-l">Seeking PFE</span>
               </div>
               <div className="hero__card-stat">
                 <span className="hero__card-stat-n">4th</span>

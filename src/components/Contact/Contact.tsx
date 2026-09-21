@@ -96,7 +96,7 @@ export function Contact() {
             Let's work <span>together</span>
           </h2>
           <p className="section__subtitle">
-            I'm actively looking for a PFA internship (July–September 2026) and always open to interesting collaboration. Don't hesitate to reach out!
+            I'm actively looking for a PFE 2027 and always open to interesting collaboration. Don't hesitate to reach out!
           </p>
         </div>
 
@@ -106,8 +106,8 @@ export function Contact() {
             <div className="contact__availability card">
               <div className="contact__avail-dot" />
               <div>
-                <div className="contact__avail-title">Available for Internship</div>
-                <div className="contact__avail-sub">PFA · July – September 2026</div>
+                <div className="contact__avail-title">Seeking PFE</div>
+                <div className="contact__avail-sub">PFE · 2027</div>
               </div>
             </div>
 
@@ -200,7 +200,7 @@ export function Contact() {
                     id="contact-subject"
                     name="subject"
                     type="text"
-                    placeholder="Internship opportunity, collaboration…"
+                    placeholder="PFE opportunity, collaboration…"
                     value={form.subject}
                     onChange={handleChange}
                     className="contact__input"

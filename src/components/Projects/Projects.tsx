@@ -28,12 +28,12 @@ interface Project {
 const projects: Project[] = [
   {
     id: "calendly",
-    title: "CalendlyClone (Xperlik)",
-    subtitle: "Internship · Xperlik",
+    title: "CalendlyClone (Experlik)",
+    subtitle: "Internship · Experlik",
     description:
       "Full-stack online booking platform with multi-gateway payments, OTP verification, calendar slot generation, and promo codes.",
     longDesc:
-      "Three independently-deployed apps (client, admin, backend) on Vercel. Supports Stripe, Razorpay, and Payzone. Built during my 2025 internship at Xperlik.",
+      "Three independently-deployed apps (client, admin, backend) on Vercel. Supports Stripe, Razorpay, and Payzone. Built during my 2025 internship at Experlik.",
     year: "2025",
     category: "web",
     image: "/assets/projects/calendlyClone/overview.png",

@@ -56,17 +56,17 @@ const timeline = [
   },
   {
     year: "2025",
-    title: "Stage d'Initiation — Xperlik",
-    org: "Xperlik (formerly Experlik)",
+    title: "Stage d'Initiation — Experlik",
+    org: "Experlik",
     desc: "Built a full-stack Calendly-clone with React, Node.js, MongoDB, multi-payment gateways (Stripe, Razorpay), and Cloudinary.",
     IconComp: TimelineBriefcase,
     color: "green",
   },
   {
-    year: "2026",
-    title: "Seeking PFA Internship",
-    org: "July – September 2026",
-    desc: "Looking for a final-year engineering internship (PFA) to apply skills in real-world innovative projects.",
+    year: "2027",
+    title: "Seeking PFE",
+    org: "2027",
+    desc: "Looking for a final-year engineering (PFE) to apply skills in real-world innovative projects.",
     IconComp: TimelineRocket,
     color: "amber",
   },
@@ -119,7 +119,7 @@ export function About() {
 
               <h3 className="about__story-title">My Story</h3>
               <p className="about__story-text">
-                I'm a 4th-year Computer Engineering student at{" "}
+                I'm a 5th/Final-year Computer Engineering student at{" "}
                 <strong>École Nationale des Sciences Appliquées de Berrechid (ENSAB)</strong>,
                 part of Hassan I University. My journey started with the integrated
                 preparatory classes where I built solid foundations in mathematics and algorithms.
@@ -130,8 +130,8 @@ export function About() {
                 I believe great engineers are T-shaped: deeply skilled in one area, broadly curious in all others.
               </p>
               <p className="about__story-text">
-                I'm currently seeking a <strong>PFA internship (Projet de Fin d'Année)</strong> for
-                July–September 2026, where I want to put theory into practice within a dynamic team.
+                I'm currently seeking a <strong>PFE (Projet de Fin d'Études)</strong> for
+                2027, where I want to put theory into practice within a dynamic team.
               </p>
 
               {/* Language badges */}
