@@ -63,6 +63,14 @@ const timeline = [
     color: "green",
   },
   {
+    year: "2026",
+    title: "Stage PFA — All-In-Site",
+    org: "All-In-Site",
+    desc: "Stagiaire Développeur Backend PHP d'une passerelle de paiement multi providers (Stripe, PayPal, Zazu, Payzone) derrière une interface unifiée (patterns Strategy/Factory), webhooks vérifiés (HMAC-SHA256), chiffrement AES-256-CBC des credentials. PHP 8.3, MySQL, Docker, Postman.",
+    IconComp: TimelineBriefcase,
+    color: "green",
+  },
+  {
     year: "2027",
     title: "Seeking PFE",
     org: "2027",
@@ -217,7 +225,7 @@ export function About() {
                   </svg>
                   LinkedIn Profile
                 </a>
-                <a href="/Cv_ENNAQUI_Zakaria.pdf" download="CV_Zakaria_Ennaqui.pdf" className="about__contact-link about__contact-link--download">
+                <a href="/Cv_ENNAQUI-Zakaria_PFE_26-27.pdf" download="Cv_ENNAQUI-Zakaria_PFE_26-27.pdf" className="about__contact-link about__contact-link--download">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
                     <path d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 004.561 21h14.878a2 2 0 001.94-1.515L22 17"/>
                   </svg>
